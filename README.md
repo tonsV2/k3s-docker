@@ -9,14 +9,25 @@ You need the following software installed on your machine
 * Make
 * Docker
 * kubectl
+* HTTPie (optional)
 
 # Launch the cluster
 ```sh
 make launch
 ```
 
-# Connect
+# Connect to the cluster
 ```sh
 export KUBECONFIG=$PWD/output/configuration/kubeconfig.yaml
 kubectl get pods --all-namespaces
+```
+
+# Deploy a "Who Am I" application
+```sh
+make deploy-whoami
+```
+
+# Perform http request to the "Who Am I" application (using HTTPie)
+```sh
+http whoami.127.0.0.1.nip.io
 ```

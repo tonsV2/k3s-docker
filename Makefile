@@ -11,4 +11,7 @@ init-storage:
 clean-storage:
 	rm -rf output/storage/*
 
+deploy-whoami:
+	helmfile sync
+
 .PHONY: clean

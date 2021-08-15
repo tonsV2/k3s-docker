@@ -1,0 +1,13 @@
+releases:
+  - name: whoami
+    namespace: whoami
+    chart: tons/whoami-go
+    version: "0.5.0"
+    values:
+      - ingress:
+          enabled: true
+          hostname: whoami.127.0.0.1.nip.io
+
+repositories:
+  - name: tons
+    url: https://helm-charts.fitfit.dk
