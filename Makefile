@@ -1,8 +1,8 @@
 launch:
 	docker-compose up
 
-clean: clean-storage
-	docker-compose down database --remove-orphans --volumes
+clean:
+	docker-compose down --remove-orphans --volumes
 
 init-storage:
 	mkdir -p k3s-storage
